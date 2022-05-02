@@ -1,0 +1,182 @@
+@import "utilities/variable";
+@import "layout/parrafo";
+
+
+
+.fondoHome {
+    background-image: url(/img/mujeres.jpg);
+    background-size: cover;
+    }  
+
+body {
+        background-image: $color-fondo;
+    }       
+
+.indexTitulo{color: $color-titulo;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+    font-family: 'Prompt', sans-serif;  
+}
+.centrarMenu{
+    text-align: center;
+    nav {
+        ul{
+            li{
+                display: inline-block;
+                &:hover{
+                    transform: scale(1.2);
+                        }
+                    a{
+                        text-decoration: none;
+                        font-family:'Roboto', sans-serif;
+                        background-color: white;
+                        font-size: 1rem;
+                        padding: 0.5rem;
+                        margin: 0.8rem;
+                        border-radius: 1rem;
+                        &:hover{
+                            background-color: $color-hover;
+                            
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }      
+main{
+    .parrafoHome{
+        font-family:'Roboto', sans-serif;
+        margin: 340px 10px 20px 10px;
+        font-size: $medida*2;    
+        font: bold;
+        @include centrar;
+        display: inline-block;
+            } 
+    }
+
+
+/*HTML Nosotros*/    
+main{
+    .parrafoNosotros{
+        font-family:'Roboto', sans-serif;
+        margin: 30px 10px 30px 10px;
+        font-size: 1.2rem;
+        font: bold;
+        @include centrar;
+        display: inline-block;
+            }
+        .centrarVideo{
+            @include centrar;
+            }        
+}
+footer{
+    @include footer;
+    .alturaFooter{
+        font-size: 1rem;
+    }
+}
+
+/*HTML Actividades*/
+
+main{
+    .tituloActiv{
+        background-color: $color-Actividades;
+        font-size: 2.5rem;
+        margin: 4rem 1rem 1rem 1rem;
+    }
+    .pAct{
+        font-family:'Roboto', sans-serif;
+        margin: 0.8rem;
+        font-size: 1.2rem;
+        font: bold;
+        @include centrar;
+        display: inline-block;
+    }
+    div{
+        text-align: center;
+        .individualActividades{
+            width: 30rem;
+            margin: 4rem 1rem 1rem 1rem;
+        }
+    }
+}
+
+@media only screen and  (min-width:768px) {     
+    .tituloActiv{
+        @include centrar;   
+    }
+}
+@media only screen and  (min-width:1090px) {
+    .padreSuperior{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .padreAct {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        @include centrar;
+    }
+}
+
+/*HTML Staff*/
+.estilo-p{
+    font-size: 1.5rem;
+}
+.altura-imagen{
+    height: 10rem;
+}
+.separacion-card{
+    margin: 1rem;
+    background-color: $color-card;
+}
+
+
+/* HTML Contacto */
+.formulario{
+    
+    margin: 50px;
+    padding: 1px 1px 1px 20px;
+}
+
+form fieldset div label{
+    font-size: 25px
+}
+.tituloFormulario{
+    margin: 50px 200px 50px 20px;
+}
+.boton{
+    font-size: 15px
+    
+}
+.botones{
+    margin: 20px
+    
+}
+.tituloMensaje{
+    text-align: end;
+}
+.mensaje{
+    width: 500px;
+    height: 200px;
+}
+.separacionLabel{
+    margin: 10px;
+}
+.inputN{
+    margin-left: 33px;
+    width: 300px;
+}
+.inputE{
+    margin-left: 65px;
+    width: 300px;
+}
+.inputM{
+    margin-left: 33px;
+    width: 500px;
+    height: 200px;
+    padding: 10px 10px 160px 10px;
+}
